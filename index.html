@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Jeu De Memoire</title>
+            <link rel="stylesheet" href="./Css/main.css"/>
+        </head>
+        <body>
+            <div class="win-slider">
+                <p>Vous Avez Gagner</p>
+                <div class="winner-name">
+                Bravo :<span></span>
+                </div>
+            <!--<div class="your-time">
+                Temp : <span class="min"></span>:<span class="sec"></span>
+                </div>-->
+                <audio id="win-audio" src="./Audio/mixkit-small-group-cheer-and-applause-518.wav" preload="auto"></audio>
+            </div>
+            <div class="control-buttons">
+                <span>Start Game</span>
+            </div>
+            <div class="memory-game">
+                <div class="main-info">
+                    <div class="name">
+                        Hello: <span></span>
+                    </div>
+                    <p>Vous avez 5 Minutes pour Gagner</p>
+                    <div class="tries">
+                        Wrong Tries: <span>0 </span>
+                    </div>
+                </div>
+                <audio id="background-sound" src="./Audio/Thunder-wind-and-rain-sound-effect.mp3" preload ="auto"></audio>
+
+                <div class="timer">
+                <span id="minutes"class="minutes-timer" ></span>:<span id="seconds" class="seconds-timer"></span>
+            </div>
+                <div class="lost-slider">
+                    <p>Vous Avez Perdu</p>
+                    <audio id="lost-sound" src="./Audio/mixkit-female-astonished-gasp-964.wav" preload="auto"></audio>
+                </div>
+                <div class="memory-game-blocks">
+                    <div class="game-block" data-animal="Cochon">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/cochon.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Cochon">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/cochon.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Canard">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/canard.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Canard">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/canard.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Chat">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chat.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Chat">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chat.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Cheval">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/cheval.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Cheval">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/cheval.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Chevre">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chèvre.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Chevre">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chèvre.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Dog">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chien.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Dog">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/chien.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="eagle">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/eagle.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="eagle">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/eagle.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Ours">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/ours.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Ours">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/ours.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Poussin">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/poussin.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Poussin">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/poussin.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Mutton">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/moutton.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Mutton">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/moutton.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Poisson">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/poisson.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Poisson">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/poisson.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Escargot">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/escargot.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Escargot">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/escargot.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Tiger">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/tiger.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Tiger">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/tiger.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Singe">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/singe.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Singe">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/singe.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Lapin">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/lapin.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Lapin">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/lapin.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Dragon">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/dragon.png" alt="" />
+                        </div>
+                    </div>
+                    <div class="game-block" data-animal="Dragon">
+                        <div class="face front"></div>
+                        <div class="face back">
+                            <img src="./Images/dragon.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="reload" type="button" onClick="window.location.reload()">
+                Recommence le Jeu
+            </button>
+            <audio id="succeed" src="./Audio/Tada-sound.mp3" preload="auto"></audio>
+            <audio id="failed" src="./Audio/Door-knock-sound-effect.mp3" preload="auto"></audio>
+            <script src="./js/main.js"></script>
+        </body>
+        </html>
